@@ -62,11 +62,10 @@ class View_Doctor_signup(View):
                 'departament': doctor.departament,
             })
 
-
-class View_Patient_signup(View):
-
-    @csrf_exempt
-    def get(self, request):
+@csrf_exempt
+def View_Patient_signup(request):
+    
+    if request.method == 'GET':
         data = Patient.objects.all()
 
         list_data = {'data': []}
@@ -86,9 +85,7 @@ class View_Patient_signup(View):
 
                 })
             return JsonResponse(list_data)
-    
-    @csrf_exempt
-    def post(self, request):
+
         if request.method == 'POST':
             data = json.loads(request.body)
 
