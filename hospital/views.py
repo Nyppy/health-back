@@ -11,6 +11,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import *
 
+from django.http import HttpResponse
+
 from django.views.decorators.csrf import csrf_exempt
 
 def is_doctor(user):
