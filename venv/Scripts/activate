@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\HP\PycharmProjects\MIAC\venv"
+VIRTUAL_ENV="C:\Users\HP\PycharmProjects\MIACv2\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

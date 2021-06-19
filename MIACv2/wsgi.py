@@ -1,5 +1,5 @@
 """
-WSGI config for MIAC project.
+WSGI config for MIACv2 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MIAC.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MIACv2.settings')
 
 application = get_wsgi_application()

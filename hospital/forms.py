@@ -55,26 +55,26 @@ class PatientForm(forms.ModelForm):
                   'profile_pic'
                   ]
 
-
-class AppointmentForm(forms.ModelForm):
-    doctorId = forms.ModelChoiceField(queryset=models.Doctor.objects.all().filter(status=True),
-                                      empty_label="Имя врача и отделение", to_field_name="user_id")
-    patientId = forms.ModelChoiceField(queryset=models.Patient.objects.all().filter(status=True),
-                                       empty_label="Имя пациента и симптомы", to_field_name="user_id")
-
-    class Meta:
-        model = models.Appointment
-        fields = ['description', 'status']
-
-
-class PatientAppointmentForm(forms.ModelForm):
-    doctorId = forms.ModelChoiceField(queryset=models.Doctor.objects.all().filter(status=True),
-                                      empty_label="Имя врача и отделение", to_field_name="user_id")
-
-    class Meta:
-        model = models.Appointment
-        fields = ['description', 'status']
 #
+# class AppointmentForm(forms.ModelForm):
+#     doctorId = forms.ModelChoiceField(queryset=models.Doctor.objects.all().filter(status=True),
+#                                       empty_label="Имя врача и отделение", to_field_name="user_id")
+#     patientId = forms.ModelChoiceField(queryset=models.Patient.objects.all().filter(status=True),
+#                                        empty_label="Имя пациента и симптомы", to_field_name="user_id")
+#
+#     class Meta:
+#         model = models.Appointment
+#         fields = ['description', 'status']
+#
+#
+# class PatientAppointmentForm(forms.ModelForm):
+#     doctorId = forms.ModelChoiceField(queryset=models.Doctor.objects.all().filter(status=True),
+#                                       empty_label="Имя врача и отделение", to_field_name="user_id")
+#
+#     class Meta:
+#         model = models.Appointment
+#         fields = ['description', 'status']
+# #
 #
 # # для страницы "Свяжитесь с нами"
 # class ContactusForm(forms.Form):
