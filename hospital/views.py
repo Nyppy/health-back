@@ -86,7 +86,7 @@ def View_Patient_signup(request):
                     'id': i.pk,
 
                 })
-            return HttpResponse(list_data)
+            return JsonResponse({'data': list_data})
 
         if request.method == 'POST':
             data = json.loads(request.body)
@@ -104,17 +104,7 @@ def View_Patient_signup(request):
             )
             patient.save()
 
-            return HttpResponse({
-                'first_name': patient.first_name,
-                'last_name': patient.last_name,
-                'gender': patient.gender,
-                'age': patient.age,
-                'profile_pic': patient.profile_pic,
-                'address': patient.address,
-                'mobile': patient.mobile,
-                'snils': patient.snils,
-                'assignedDoctorId': patient.assignedDoctorId,
-            })
+            return JsonResponse({'test', 'test'})
 
 
 class View_data_Patient(View):
